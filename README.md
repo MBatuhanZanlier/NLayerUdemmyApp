@@ -61,4 +61,26 @@ Katmanlı mimaride genellikle dört ana katman bulunur:
 # UNIT OF WORK 
 ![UnitOfWork](https://github.com/user-attachments/assets/252a4f7b-6304-465b-aa9a-12147376ef01)
 
-Unit of Work, birçok işlemi bir arada gruplar ve tüm işlemlerin başarılı bir şekilde tamamlanmasını sağlamak için tek bir işlem (transaction) olarak yönetir. Eğer işlemlerden biri başarısız olursa, diğer işlemler de geri alınarak (rollback) bütün işlem iptal edilir. Bu, atomicity prensibini takip eder.
+- Unit of Work, birçok işlemi bir arada gruplar ve tüm işlemlerin başarılı bir şekilde tamamlanmasını sağlamak için tek bir işlem (transaction) olarak yönetir. Eğer işlemlerden biri başarısız olursa, diğer işlemler de geri alınarak (rollback) bütün işlem iptal edilir. Bu, atomicity prensibini takip eder.
+
+- Veritabanı İşlemleri: Genellikle veritabanı işlemleriyle ilişkilidir. Birden fazla tablodaki değişiklikleri tek bir işlemde birleştirir. Örneğin, birden fazla veri kaynağında (tablo veya koleksiyon) değişiklik yapılıyorsa, Unit of Work bu işlemleri birleştirir ve hepsini tek bir transaction içinde yürütür.
+## öRNEK SENARYO 
+Diyelim ki bir e-ticaret platformunda, bir kullanıcı siparişi verdiğinde hem sipariş hem de stok veritabanı güncellenmesi gerekiyor. Eğer sipariş kaydedilirken stok kaydı başarısız olursa, sipariş işlemi de geri alınmalıdır. Bu tür bir işlemi yönetmek için Unit of Work kullanılır. 
+
+# SEED DATA  
+![Ekran Görüntüsü (301)](https://github.com/user-attachments/assets/2f04a41e-2631-4168-abf2-3724002033bd)
+- Projedeki örnek seed data.
+
+- Seed Data, yazılım geliştirme ve özellikle veritabanı yönetimi bağlamında, bir uygulamanın veritabanına başlangıçta yüklenmesi gereken veriler için kullanılan terimdir. Bu veriler, genellikle uygulamanın çalışabilmesi için gerekli olan temel, varsayılan ya da örnek veriler olabilir. Seed data, genellikle uygulama başlatıldığında bir kez yüklenir ve bu veriler genellikle veritabanı oluşturma veya ilk yapılandırma sırasında kullanılır. 
+
+# Fluent Validation 
+![FluentValidation](https://github.com/user-attachments/assets/07cc3306-e655-4827-8b97-02938544b7bf) 
+   ## Projeden örnek FluenValidation Kullanımı.
+![Ekran Görüntüsü (302)](https://github.com/user-attachments/assets/1f78d268-95ad-4327-b4f6-be79670accb0)
+- Apıden ProductDto türünde döndüğü için validation kurallarını direk db den değil dtodan aldım.
+
+- Uygulama geliştirirken en zor noktalardan birisi sistemi kararlı yapıda tutmaktır. Bunu yapmanın yolu da validasyonlardan geçiyor. Peki yazılım geliştirirken validasyon yapmak ne demek? Şöyle düşünün bir post endpoint'iniz var. Input olarak aldığı obje içerisinde de integer bir özellik var. Ve bu özelliğin mantıksal olarak 0 olmaması gerekiyor. Yada boş geçilmemesi gerekiyor. Eğer servisiniz bu özelliği kontrol etmeden db'ye yazarsa, database'in hata fırlatmasına ve uygulamanızın çalışma anında kırılmasına neden olur. Daha da kötüsü kırılmadan devam eder ve data bütünlüğünün bozulmasına neden olabilir.
+
+- Bir validasyon yapısı kurmak hem kuralların okunabilirliği hem de kuralların esnetilebilir olması açısından çok faydalıdır. Bu amaçla yaratılmış bir çok açık kaynaklı kütüphane bulunur. .Net uygulamaları için en çok kullanılan validation kütüphanesi ise FluentValidation dır.
+
+  
