@@ -99,3 +99,22 @@ Yazılım geliştirme süreçlerinde uygulamanın tümünde meydana gelen hatala
 
 - Loglama ve İzleme: Global exception handler sayesinde tüm hatalar merkezi bir şekilde kaydedilebilir ve loglanabilir. Bu da, hataların izlenmesini, analiz edilmesini ve çözülmesini kolaylaştırır.
 
+# ACTİON FİLTER 
+## NotFound Filter 
+![Ekran Görüntüsü (305)](https://github.com/user-attachments/assets/98e27a6a-2b40-41bf-a8d8-99e234d87573)
+
+- ASP.NET Core, uygulama geliştirme sürecinde çok sayıda filter mekanizması sunar. Bu filtreler, belirli bir işlem öncesinde veya sonrasında çalıştırılmak üzere tasarlanmış kod bloklarıdır. Action Filters, HTTP istekleriyle ilgili işlemler yapmanıza olanak tanır.
+- NotFoundFilter, API isteklerinde, belirtilen Entity (veri nesnesi) bulunmadığı takdirde, uygun bir hata mesajı döndürmek için kullanılan bir Action Filter’dır. Bu filtre, id değerini alarak, belirli bir kaynağın veritabanında olup olmadığını kontrol eder. Eğer kaynak bulunamazsa, kullanıcıya 404 Not Found hatası döndürür.
+
+- Bu NotFoundFilter filtreyi, API’nizdeki her işlemde kullanabilirsiniz. Örneğin, veri tabanında olmayan bir id ile yapılan sorgularda, kullanıcıya anlamlı ve anlaşılır bir hata mesajı sunar.
+## Projeden Örnek
+  ![Ekran Görüntüsü (306)](https://github.com/user-attachments/assets/9b0ff0ea-3f40-4259-bf5f-7a264bda8814)
+
+- Bu filtre, özellikle RESTful API'ler geliştiren uygulamalarda, her istek öncesinde verinin varlığını kontrol etmenize olanak tanır.
+- 404 Not Found hatalarını merkezi bir şekilde yönetir.
+- Kod tekrarını azaltır ve her action için ayrı ayrı id kontrolü yapmanıza gerek bırakmaz.
+- Bu filtreyi uygulamanıza entegre etmek, daha tutarlı ve güvenli bir API geliştirmenizi sağlar, aynı zamanda kullanıcıların hatalarla karşılaştığında anlamlı mesajlar almasını garanti eder.
+
+## AutoFac 
+![Autofac](https://github.com/user-attachments/assets/c39bc370-721a-44aa-b8d9-52f46ba91f95)
+- Bileşenlerin Otomatik Çözülmesi: Autofac, nesneleri yaratırken ve bağımlılıklarını enjekte ederken otomatik olarak çözümleme yapar. Bu sayede, her bağımlılığı manuel olarak yaratmak yerine, konteyner aracılığıyla kolayca yönetebilirsiniz.
