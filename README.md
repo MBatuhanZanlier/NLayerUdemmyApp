@@ -26,38 +26,35 @@ https://www.udemy.com/course/asp-net-core-api-web-cok-katmanli-mimari-api-best-p
 - AutoFac
 - Caching Memory
 
-## N Layer Architecture 
+# N Layer Architecture 
 
 Katmanlı mimari (NLayer Architecture), bir yazılım uygulamasını farklı işlevsel bileşenlere veya katmanlara ayırarak, bu bileşenlerin daha modüler, bakımı kolay ve test edilebilir hale gelmesini sağlayan bir yazılım mimarisi desenidir. Her katman, belirli bir sorumluluğa sahip olup, uygulamanın belirli bir bölümünün işlevselliğini kapsar. Bu mimari, yazılım geliştirme sürecinde karmaşıklığı yönetmek ve uygulamanın esnekliğini artırmak amacıyla kullanılır.
 
-# Katmanlar Nelerdir?
+## Katmanlar Nelerdir?
 
 Katmanlı mimaride genellikle dört ana katman bulunur:
 
-$ Presentation Layer (Sunum Katmanı):
+## Presentation Layer (Sunum Katmanı):
 
-Amacı: Kullanıcı arayüzünün sağlandığı katmandır. Kullanıcı ile uygulama arasındaki etkileşimi yönetir.
+- Amacı: Kullanıcı arayüzünün sağlandığı katmandır. Kullanıcı ile uygulama arasındaki etkileşimi yönetir.
 
+## Business Logic Layer (İş Katmanı):
 
-
-Business Logic Layer (İş Katmanı):
-
-Amacı: Uygulamanın iş kurallarını ve mantığını içerir.
+- Amacı: Uygulamanın iş kurallarını ve mantığını içerir.
 
 
 
-Data Access Layer (Veri Erişim Katmanı):
+## Data Access Layer (Veri Erişim Katmanı):
 
-Amacı: Uygulamanın veri kaynaklarına (veritabanları, dosya sistemleri, harici API'ler vb.) erişimini sağlar.
+- Amacı: Uygulamanın veri kaynaklarına (veritabanları, dosya sistemleri, harici API'ler vb.) erişimini sağlar.
 
 
+# Katmanlar Arasındaki İlişki
 
-Katmanlar Arasındaki İlişki
+- Sunum Katmanı kullanıcıdan gelen girdileri alır ve İş Katmanına iletir.
 
-Sunum Katmanı kullanıcıdan gelen girdileri alır ve İş Katmanına iletir.
+- İş Katmanı bu girdileri iş kurallarına göre işler ve gerekli verileri almak için Veri Erişim Katmanı ile iletişim kurar.
 
-İş Katmanı bu girdileri iş kurallarına göre işler ve gerekli verileri almak için Veri Erişim Katmanı ile iletişim kurar.
+- Veri Erişim Katmanı ise verileri Veritabanı Katmanından alır ve iş katmanına geri döner.
 
-Veri Erişim Katmanı ise verileri Veritabanı Katmanından alır ve iş katmanına geri döner.
-
-Bu yapı, her katmanın kendi sorumluluk alanında çalışmasını sağlar ve katmanlar arasındaki bağımlılıkları azaltarak, uygulamanın daha modüler ve esnek olmasını mümkün kılar.
+- Bu yapı, her katmanın kendi sorumluluk alanında çalışmasını sağlar ve katmanlar arasındaki bağımlılıkları azaltarak, uygulamanın daha modüler ve esnek olmasını mümkün kılar.
