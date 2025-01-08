@@ -115,6 +115,21 @@ Yazılım geliştirme süreçlerinde uygulamanın tümünde meydana gelen hatala
 - Kod tekrarını azaltır ve her action için ayrı ayrı id kontrolü yapmanıza gerek bırakmaz.
 - Bu filtreyi uygulamanıza entegre etmek, daha tutarlı ve güvenli bir API geliştirmenizi sağlar, aynı zamanda kullanıcıların hatalarla karşılaştığında anlamlı mesajlar almasını garanti eder.
 
-## AutoFac 
+# AutoFac 
 ![Autofac](https://github.com/user-attachments/assets/c39bc370-721a-44aa-b8d9-52f46ba91f95)
 - Bileşenlerin Otomatik Çözülmesi: Autofac, nesneleri yaratırken ve bağımlılıklarını enjekte ederken otomatik olarak çözümleme yapar. Bu sayede, her bağımlılığı manuel olarak yaratmak yerine, konteyner aracılığıyla kolayca yönetebilirsiniz.
+
+ # Caching memory 
+![Ekran Görüntüsü (308)](https://github.com/user-attachments/assets/9430d15d-2ecf-485f-b480-310eab5799f4)
+
+Caching Memory (Önbellek Belleği), verilerin geçici olarak saklandığı ve hızlı erişim sağlamak amacıyla kullanılan bir tür bellek alanıdır. Veritabanı, ağ istekleri veya işlemci gibi kaynaklardan gelen verilerin sürekli olarak tekrar alınmasının önüne geçmek ve performansı artırmak için cache (önbellek) kullanılır. Önbellek, daha önce erişilen verileri hızlı bir şekilde geri getirebilmek amacıyla saklar.
+
+Bu tür önbellekler, genellikle RAM (Rastgele Erişim Belleği) üzerinde depolanır ve genellikle daha yavaş, ancak büyük veri kaynaklarına kıyasla çok daha hızlı erişim sunar. Caching Memory terimi, hem donanımda (örneğin, işlemci cache'leri) hem de yazılımda (örneğin, web uygulamalarında kullanılan cache'ler) kullanılabilir. 
+
+ (Caching Memory) Ne İşe Yarar?
+- Performans İyileştirme: En temel amacı, daha önce alınan verileri hızla geri almak, böylece uygulama ya da sistemin performansını artırmaktır. Önbelleğe alınan veriler, ilk erişimde daha uzun sürebilir, ancak sonraki erişimler çok daha hızlıdır.
+
+- Yüksek Trafik ve İstek Yönetimi: Aynı veriye sıkça erişiliyorsa, her seferinde veritabanı sorgusu yapmak yerine, bu veri önbelleğe alınarak daha hızlı erişilebilir. Bu, özellikle web uygulamaları için önemlidir çünkü veri tekrar tekrar - sorgulandığında sistemin kaynakları aşırı yüklenebilir.
+
+- Ağ Trafiğini Azaltma: Veri, uzak sunuculardan her istekle alınmak yerine, yakın bir önbellekten sağlanabilir. Bu, ağ trafiğini azaltır ve uygulamanın daha hızlı yanıt vermesini sağlar.
+
