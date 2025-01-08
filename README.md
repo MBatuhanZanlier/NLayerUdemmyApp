@@ -58,3 +58,7 @@ Katmanlı mimaride genellikle dört ana katman bulunur:
 - Veri Erişim Katmanı ise verileri Veritabanı Katmanından alır ve iş katmanına geri döner.
 
 - Bu yapı, her katmanın kendi sorumluluk alanında çalışmasını sağlar ve katmanlar arasındaki bağımlılıkları azaltarak, uygulamanın daha modüler ve esnek olmasını mümkün kılar.
+# UNIT OF WORK 
+![UnitOfWork](https://github.com/user-attachments/assets/252a4f7b-6304-465b-aa9a-12147376ef01)
+
+Unit of Work, birçok işlemi bir arada gruplar ve tüm işlemlerin başarılı bir şekilde tamamlanmasını sağlamak için tek bir işlem (transaction) olarak yönetir. Eğer işlemlerden biri başarısız olursa, diğer işlemler de geri alınarak (rollback) bütün işlem iptal edilir. Bu, atomicity prensibini takip eder.
