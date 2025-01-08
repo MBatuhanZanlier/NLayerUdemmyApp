@@ -126,7 +126,7 @@ Caching Memory (Önbellek Belleği), verilerin geçici olarak saklandığı ve h
 
 Bu tür önbellekler, genellikle RAM (Rastgele Erişim Belleği) üzerinde depolanır ve genellikle daha yavaş, ancak büyük veri kaynaklarına kıyasla çok daha hızlı erişim sunar. Caching Memory terimi, hem donanımda (örneğin, işlemci cache'leri) hem de yazılımda (örneğin, web uygulamalarında kullanılan cache'ler) kullanılabilir. 
 
- (Caching Memory) Ne İşe Yarar?
+ ## Caching Memory Ne İşe Yarar?
 - Performans İyileştirme: En temel amacı, daha önce alınan verileri hızla geri almak, böylece uygulama ya da sistemin performansını artırmaktır. Önbelleğe alınan veriler, ilk erişimde daha uzun sürebilir, ancak sonraki erişimler çok daha hızlıdır.
 
 - Yüksek Trafik ve İstek Yönetimi: Aynı veriye sıkça erişiliyorsa, her seferinde veritabanı sorgusu yapmak yerine, bu veri önbelleğe alınarak daha hızlı erişilebilir. Bu, özellikle web uygulamaları için önemlidir çünkü veri tekrar tekrar - sorgulandığında sistemin kaynakları aşırı yüklenebilir.
