@@ -83,4 +83,19 @@ Diyelim ki bir e-ticaret platformunda, bir kullanıcı siparişi verdiğinde hem
 
 - Bir validasyon yapısı kurmak hem kuralların okunabilirliği hem de kuralların esnetilebilir olması açısından çok faydalıdır. Bu amaçla yaratılmış bir çok açık kaynaklı kütüphane bulunur. .Net uygulamaları için en çok kullanılan validation kütüphanesi ise FluentValidation dır.
 
+# Global Exception Handler
+![Ekran Görüntüsü (303)](https://github.com/user-attachments/assets/007586d4-2ef0-480e-ba6d-5cde73a67453)
+
+![Ekran Görüntüsü (304)](https://github.com/user-attachments/assets/b254ea9a-a998-46c4-b5b8-7596cc599082)
+- Program.cs de belirlediğiniz global exception handler işlem sırası önemlidir.
   
+Yazılım geliştirme süreçlerinde uygulamanın tümünde meydana gelen hataları veya istisnaları (exceptions) merkezi bir noktada yakalayıp, uygun bir şekilde işleyen bir yapıdır. Bu yapı, hata yönetimini düzenli ve tutarlı bir şekilde ele almak amacıyla kullanılır. 
+
+- Kapsamlı Hata Yönetimi: Uygulama içerisinde farklı yerlerde meydana gelen hatalar, merkezi bir yerde toplanarak işlenebilir. Bu sayede her hata için ayrı ayrı işlem yapma ihtiyacı ortadan kalkar.
+
+- Kullanıcı Dostu Hata Mesajları: Kullanıcıya gösterilen hata mesajlarını yönetmek için merkezi bir sistem kurarak, kullanıcıya anlaşılır ve güvenli mesajlar gösterilebilir. Teknik detaylar gizlenebilir.
+
+- Uygulama İstikrarı: Hatalar doğru şekilde işlenip yönetildiğinde, uygulamanın çökmesi veya beklenmedik şekilde sonlanması engellenebilir. Uygulama daha stabil hale gelir.
+
+- Loglama ve İzleme: Global exception handler sayesinde tüm hatalar merkezi bir şekilde kaydedilebilir ve loglanabilir. Bu da, hataların izlenmesini, analiz edilmesini ve çözülmesini kolaylaştırır.
+
